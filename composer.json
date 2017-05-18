@@ -16,7 +16,7 @@
     },
     "autoload": {
         "files": [
-            "php-util/src/config.php"
+            "src/config.php"
         ]
     },
     "autoload-dev": {

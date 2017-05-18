@@ -1,2 +1,2 @@
-# php-util
-Utility functions for php
+# Utility Functions for PHP
+

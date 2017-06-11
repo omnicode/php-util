@@ -698,6 +698,20 @@ if (!function_exists('shorten')) {
     }
 }
 
+
+if (!function_exists('safeJsonEncode')) {
+    /**
+     * safe json_encode
+     *
+     * @param string $value
+     * @return string
+     */
+    function safeJsonEncode($value)
+    {
+        return json_encode($value, JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS);
+    }
+}
+
 if (!function_exists('getClientIp')) {
     /**
      * get client ip

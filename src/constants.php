@@ -29,9 +29,9 @@ if (!defined('WEEK')) {
 }
 
 if (!defined('MONTH')) {
-    define('MONTH', 604800);
+    define('MONTH', 2592000);
 }
 
 if (!defined('YEAR')) {
-    define('YEAR', 604800);
+    define('YEAR', 31536000);
 }

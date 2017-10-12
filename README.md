@@ -71,3 +71,26 @@ function is_natural($number, $zero = false)
  */
 function between($number, $min, $max)
 ```
+
+### <a id="is_numeric_list"></a>is_numeric_list
+```
+/**
+ * if an array is provided checks the values of the array all to be numeric,
+ * if string is provided, will check to be comma separated list
+ *
+ * @param mixed $data - array of numbers or string as comma separated numbers
+ * @return bool
+ */
+function is_numeric_list($data)
+```
+
+### <a id="lastChars"></a>lastChars
+```
+/**
+ * returns given amount of characters counting backwards
+ *
+ * @param string $str
+ * @param int $count
+ * @return string
+ */
+```

@@ -4,6 +4,8 @@ Functions are added to global namespace
 
 ## Contents
 
+* <a href="#dbg">dbg</a>
+* <a href="#h">h</a>
 * <a href="#is_natural">is_natural</a>
 * <a href="#between">between</a>
 * <a href="#is_numeric_list">is_numeric_list</a>
@@ -42,10 +44,37 @@ Functions are added to global namespace
 * <a href="#isCli">isCli</a>
 
 
+### <a id="dbg"></a>dbg
+```
+/**
+ * debug method from Cakephp - convenient wrapper for print_r
+ *
+ * @param $var
+ * @param bool|false $return
+ * @return string
+ */
+function dbg($var, $return = false)
+```
+
+### <a id="h"></a>h
+```
+/**
+ * Convenience method for htmlspecialchars.
+ *
+ * @param string|array|object $text Text to wrap through htmlspecialchars. Also works with arrays, and objects.
+ *    Arrays will be mapped and have all their elements escaped. Objects will be string cast if they
+ *    implement a `__toString` method. Otherwise the class name will be used.
+ * @param bool $double Encode existing html entities.
+ * @param string|null $charset Character set to use when escaping. Defaults to config value in `mb_internal_encoding()`
+ * or 'UTF-8'.
+ * @return string Wrapped text.
+ * @link http://book.cakephp.org/3.0/en/core-libraries/global-constants-and-functions.html#h
+ */
+function h($text, $double = true, $charset = null)
+```
 
 
-
-### <a id="is_natural"></a> is_natural
+### <a id="is_natural"></a>is_natural
 
 ```
 /**

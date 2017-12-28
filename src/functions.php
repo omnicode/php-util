@@ -362,6 +362,29 @@ if (!function_exists('array_iunique')) {
 }
 
 
+if (!function_exists('is_numeric_array')) {
+    /**
+     * check if array's keys are all numeric
+     *
+     * @param array
+     * @return bool
+     * @link https://codereview.stackexchange.com/q/201/32948
+     */
+    function is_numeric_array($array)
+    {
+        $result = true;
+        foreach ($array as $k => $v) {
+            if (!is_int($k)) {
+                $result = false;
+                break;
+            }
+        }
+        
+        return $result;
+    }
+}
+
+
 if (!function_exists('getDirectorySize')) {
     /**
      * returns the size of the directory

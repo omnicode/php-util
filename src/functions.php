@@ -361,6 +361,14 @@ if (!function_exists('array_iunique')) {
     }
 }
 
+if (!function_exists('make_array')) {
+    function make_array(&$array) {
+        if (!is_array($array)) {
+            $array = [$array];
+        }
+    }
+}
+
 
 if (!function_exists('getDirectorySize')) {
     /**

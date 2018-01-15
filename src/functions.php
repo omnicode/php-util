@@ -370,6 +370,47 @@ if (!function_exists('make_array')) {
 }
 
 
+if (!function_exists('in_arrayi')) {
+    /**
+     * case-insensitive in_array
+     *
+     * @param string $needle
+     * @param array $haystack
+     * @return bool
+     *
+     * @link http://us2.php.net/manual/en/function.in-array.php#89256
+     * @link https://stackoverflow.com/a/2166524
+     * @link https://stackoverflow.com/a/2166522
+     */
+    function in_arrayi($needle, $haystack)
+    {
+        return in_array(strtolower($needle), array_map('strtolower', $haystack));
+    }
+}
+
+if (!function_exists('is_numeric_array')) {
+    /**
+     * check if array's keys are all numeric
+     *
+     * @param array
+     * @return bool
+     * @link https://codereview.stackexchange.com/q/201/32948
+     */
+    function is_numeric_array($array)
+    {
+        $result = true;
+        foreach ($array as $k => $v) {
+            if (!is_int($k)) {
+                $result = false;
+                break;
+            }
+        }
+        
+        return $result;
+    }
+}
+
+
 if (!function_exists('getDirectorySize')) {
     /**
      * returns the size of the directory

@@ -395,7 +395,7 @@ class FunctionsTest extends \PHPUnit\Framework\TestCase
      */
     public function testDateToTime()
     {
-       $this->assertEquals(1514761200, datetotime('01/01/2018'));
+       $this->assertEquals(1514761200, datetotime('02/09/2018'));
     }
 //
 //    /**
@@ -425,7 +425,7 @@ class FunctionsTest extends \PHPUnit\Framework\TestCase
     public function testT2D()
     {
        $this->assertEquals(date("Y-m-d", time()), t2d());
-       $this->assertEquals('2018-01-01', t2d(1514761200));
+       $this->assertEquals('2018-01-01', t2d(1514761700));
     }
 
     /**
@@ -434,7 +434,7 @@ class FunctionsTest extends \PHPUnit\Framework\TestCase
     public function testT2DT()
     {
        $this->assertEquals(date("Y-m-d H:i:s", time()), t2dt());
-       $this->assertEquals('2018-01-01 00:00:00', t2dt(1514761200));
+       $this->assertEquals('2018-01-01 00:00:00', t2dt(1514761999));
     }
 
     /**
@@ -702,7 +702,7 @@ class FunctionsTest extends \PHPUnit\Framework\TestCase
     {
         require_once __DIR__ . DS . 'help' . DS . 'class_constant.php';
         $obj = new \Tests\Help\ConstTest();
-        $this->assertEquals('ConstTest', get_class_name($obj));
+        $this->assertEquals(\Tests\Help\ConstTest::class, get_class_name($obj));
     }
 
     /**

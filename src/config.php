@@ -1,4 +1,7 @@
 <?php
+
+namespace PhpUtil;
+
 // include constants
 require_once 'constants.php';
 

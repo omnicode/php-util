@@ -1,4 +1,7 @@
 <?php
+
+namespace PhpUtil;
+
 // directory separator alias
 if (!defined('DS')) {
     define('DS', DIRECTORY_SEPARATOR);
@@ -26,12 +29,4 @@ if (!defined('DAY')) {
 
 if (!defined('WEEK')) {
     define('WEEK', 604800);
-}
-
-if (!defined('MONTH')) {
-    define('MONTH', 2592000);
-}
-
-if (!defined('YEAR')) {
-    define('YEAR', 31536000);
 }

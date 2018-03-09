@@ -18,29 +18,29 @@ Functions are added to global namespace
 * <a href="#get_last_value">get_last_value</a>
 * <a href="#array_unset">array_unset</a>
 * <a href="#array_iunique">array_iunique</a>
-* <a href="#getDirectorySize">getDirectorySize</a>
-* <a href="#getFileName">getFileName</a>
-* <a href="#getFileExtension">getFileExtension</a>
-* <a href="#checkFileExists">checkFileExists</a>
-* <a href="#formatBytes">formatBytes</a>
+* <a href="#get_directory_size">get_directory_size</a>
+* <a href="#get_file_name">get_file_name</a>
+* <a href="#get_file_extension">get_file_extension</a>
+* <a href="#check_file_exists">check_file_exists</a>
+* <a href="#format_bytes">format_bytes</a>
 * <a href="#datetotime">datetotime</a>
-* <a href="#isDate">isDate</a>
+* <a href="#is_date">is_date</a>
 * <a href="#t2d">t2d</a>
 * <a href="#t2dt">t2dt</a>
-* <a href="#getRange">getRange</a>
+* <a href="#get_range">get_range</a>
 * <a href="#_humanize">_humanize</a>
-* <a href="#getClassConstant">getClassConstant</a>
-* <a href="#getClassConstants">getClassConstants</a>
+* <a href="#get_class_constant">get_class_constant</a>
+* <a href="#get_class_constants">get_class_constants</a>
 * <a href="#shorten">shorten</a>
-* <a href="#safeJsonEncode">safeJsonEncode</a>
-* <a href="#getClientIp">getClientIp</a>
+* <a href="#safe_json_encode">safe_json_encode</a>
+* <a href="#get_client_ip">get_client_ip</a>
 * <a href="#rm_rf">rm_rf</a>
-* <a href="#copyR">copyR</a>
-* <a href="#getQueryParams">getQueryParams</a>
-* <a href="#getClassName">getClassName</a>
-* <a href="#extractNumber">extractNumber</a>
-* <a href="#secondsToHourMinute">secondsToHourMinute</a>
-* <a href="#isCli">isCli</a>
+* <a href="#copy_r">copy_r</a>
+* <a href="#get_query_params">get_query_params</a>
+* <a href="#get_class_name">get_class_name</a>
+* <a href="#extract_number">extract_number</a>
+* <a href="#seconds_to_hour_minute">seconds_to_hour_minute</a>
+* <a href="#is_cli">is_cli</a>
 
 
 ### <a id="dbg"></a>dbg
@@ -112,7 +112,7 @@ function between($number, $min, $max)
 function is_numeric_list($data)
 ```
 
-### <a id="lastChars"></a>lastChars
+### <a id="last_chars"></a>last_chars
 ```
 /**
  * returns given amount of characters counting backwards
@@ -121,11 +121,11 @@ function is_numeric_list($data)
  * @param int $count
  * @return string
  */
-function lastChars($str, $count = 1)
+function last_chars($str, $count = 1)
 ```
 
 
-### <a id="createSlug"></a>createSlug
+### <a id="create_slug"></a>create_slug
 ```
 /**
  * create slug from string
@@ -134,22 +134,7 @@ function lastChars($str, $count = 1)
  * @param string $symbol
  * @return string - e.g. in word1-word2-word3 format
  */
-function createSlug($str = "", $symbol = "-")
-```
-
-
-### <a id="getRandomStr"></a>getRandomStr
-```
-/**
- * get random string using /dev/urandom
- * @link http://security.stackexchange.com/a/3939/38200
- *
- * @param null $length
- * @param bool|false $hash
- * @return string
- * @throws Exception
- */
-function getRandomStr($length = null, $hash = false)
+function create_slug($str = "", $symbol = "-")
 ```
 
 ### <a id="coalesce"></a>coalesce
@@ -164,7 +149,7 @@ function getRandomStr($length = null, $hash = false)
 function coalesce()
 ```
 
-### <a id="getFirstKey"></a>getFirstKey
+### <a id="get_first_key"></a>get_first_key
 ```
 /**
  * returns the first key of the array
@@ -172,11 +157,11 @@ function coalesce()
  * @param array $array
  * @return mixed
  */
-function getFirstKey(array $array = [])
+function get_first_key(array $array = [])
 ```
 
 
-### <a id="getFirstValue"></a>getFirstValue
+### <a id="get_first_value"></a>get_first_value
 ```
 /**
  * returns the first value of the array
@@ -184,11 +169,11 @@ function getFirstKey(array $array = [])
  * @param array $array
  * @return mixed
  */
-function getFirstValue($array)
+function get_first_value($array)
 ```
 
 
-### <a id="getLastKey"></a>getLastKey
+### <a id="get_last_key"></a>get_last_key
 ```
 /**
  * returns the last key of the array
@@ -196,10 +181,10 @@ function getFirstValue($array)
  * @param array $array
  * @return mixed
  */
-function getLastKey($array)
+function get_last_key($array)
 ```
 
-### <a id="getLastValue"></a>getLastValue
+### <a id="get_last_value"></a>get_last_value
 ```
 /**
  * returns the last value of the array
@@ -207,7 +192,7 @@ function getLastKey($array)
  * @param array $array
  * @return mixed
  */
-function getLastValue($array)
+function get_last_value($array)
 ```
 
 ### <a id="array_unset"></a>array_unset
@@ -237,7 +222,7 @@ function array_iunique($array)
 
 
 
-### <a id="getDirectorySize"></a>getDirectorySize
+### <a id="get_directory_size"></a>get_directory_size
 ```
 /**
  * returns the size of the directory
@@ -249,10 +234,10 @@ function array_iunique($array)
  * @throws Exception
  * @link http://stackoverflow.com/a/478161/932473
  */
-function getDirectorySize($path = null, $unit = false, $intOnly = false)
+function get_directory_size($path = null, $unit = false, $intOnly = false)
 ```
 
-### <a id="getFileName"></a>getFileName
+### <a id="get_file_name"></a>get_file_name
 ```
 /**
  * returns the file name without the extension
@@ -260,10 +245,10 @@ function getDirectorySize($path = null, $unit = false, $intOnly = false)
  * @param string $fileName
  * @return string
  */
-function getFileName($fileName = '')
+function get_file_name($fileName = '')
 ```
 
-### <a id="getFileExtension"></a>getFileExtension
+### <a id="get_file_extension"></a>get_file_extension
 ```
 /**
  * returns the file extension from full file name
@@ -271,10 +256,10 @@ function getFileName($fileName = '')
  * @param string $fileName
  * @return string
  */
-function getFileExtension($fileName)
+function get_file_extension($fileName)
 ```
 
-### <a id="checkFileExists"></a>checkFileExists
+### <a id="check_file_exists"></a>check_file_exists
 ```
 /**
  * if file exists will return it - with number concatenated
@@ -284,11 +269,11 @@ function getFileExtension($fileName)
  * @param int $n
  * @return bool|string
  */
-function checkFileExists($path, $fileName, $n = 100)
+function check_file_exists($path, $fileName, $n = 100)
 ```
 
 
-### <a id="formatBytes"></a>formatBytes
+### <a id="format_bytes"></a>format_bytes
 ```
 /**
  * @param $bytes
@@ -296,7 +281,7 @@ function checkFileExists($path, $fileName, $n = 100)
  * @return string
  * @link http://stackoverflow.com/a/2510459/932473
  */
-function formatBytes($bytes, $precision = 0)
+function format_bytes($bytes, $precision = 0)
 ```
 
 ### <a id="datetotime"></a>datetotime
@@ -310,7 +295,7 @@ function datetotime($date)
 ```
 
 
-### <a id="isDate"></a>isDate
+### <a id="is_date"></a>is_date
 ```
 /**
  * checks if the given date(s) are valid mysql dates
@@ -319,7 +304,7 @@ function datetotime($date)
  * @param null $date
  * @return bool - true if all dates are valid, false otherwise
  */
-function isDate($date1 = null, $date = null)
+function is_date($date1 = null, $date = null)
 ```
 
 
@@ -345,7 +330,7 @@ function t2d($timeStr = null)
 function t2dt($timeStr = null)
 ```
 
-### <a id="getRange"></a>getRange
+### <a id="get_range"></a>get_range
 ```
 /**
  * returns array with options for select box
@@ -355,7 +340,7 @@ function t2dt($timeStr = null)
  * @param int $step
  * @return array
  */
-function getRange($min, $max, $step = 1)
+function get_range($min, $max, $step = 1)
 ```
 
 ### <a id="_humanize"></a>_humanize
@@ -368,7 +353,7 @@ function _humanize($val)
 ```
 
 
-### <a id="getClassConstant"></a>getClassConstant
+### <a id="get_class_constant"></a>get_class_constant
 ```
 /**
  * returns constant of the class based on its value
@@ -379,11 +364,11 @@ function _humanize($val)
  * @return string
  * @throws Exception
  */
-function getClassConstant($className, $value, $humanize = true)
+function get_class_constant($className, $value, $humanize = true)
 ```
 
 
-### <a id="getClassConstants"></a>getClassConstants
+### <a id="get_class_constants"></a>get_class_constants
 ```
 /**
  * returns the list of constants of the given class
@@ -394,7 +379,7 @@ function getClassConstant($className, $value, $humanize = true)
  * @return array
  * @throws Exception
  */
-function getClassConstants($className, $reverse = false, $humanize = true)
+function get_class_constants($className, $reverse = false, $humanize = true)
 ```
 
 ### <a id="shorten"></a>shorten
@@ -411,7 +396,7 @@ function shorten($str = '', $length = null, $raw = false)
 ```
 
 
-### <a id="safeJsonEncode"></a>safeJsonEncode
+### <a id="safe_json_encode"></a>safe_json_encode
 ```
 /**
  * safe json_encode
@@ -419,18 +404,18 @@ function shorten($str = '', $length = null, $raw = false)
  * @param string $value
  * @return string
  */
-function safeJsonEncode($value)
+function safe_json_encode($value)
 ```
 
 
-### <a id="getClientIp"></a>getClientIp
+### <a id="get_client_ip"></a>get_client_ip
 ```
 /**
  * get client ip
  *
  * @return string
  */
-function getClientIp()
+function get_client_ip()
 ```
 
 ### <a id="rm_rf"></a>rm_rf
@@ -447,7 +432,7 @@ function rm_rf($path)
 ```
 
 
-### <a id="copyR"></a>copyR
+### <a id="copy_r"></a>copy_r
 ```
 /**
  * recursively copies files and directories
@@ -456,11 +441,11 @@ function rm_rf($path)
  * @param string $dst
  * @return bool
  */
-function copyR($src, $dst)
+function copy_r($src, $dst)
 ```
 
 
-### <a id="getQueryParams"></a>getQueryParams
+### <a id="get_query_params"></a>get_query_params
 ```
 /**
  * parses the url and returns the specified or all list of params
@@ -470,11 +455,11 @@ function copyR($src, $dst)
  * @param bool $onlyQuery - if true the param will be checked only in the query string, default - false
  * @return mixed - string if found the param, bool false otherwise
  */
-function getQueryParams($url, $param = '', $onlyQuery = false)
+function get_query_params($url, $param = '', $onlyQuery = false)
 ```
 
 
-### <a id="getClassName"></a>getClassName
+### <a id="get_class_name"></a>get_class_name
 ```
 /**
  * returns class name from object - without namespace
@@ -482,10 +467,10 @@ function getQueryParams($url, $param = '', $onlyQuery = false)
  * @param string $object
  * @return mixed
  */
-function getClassName($object = '')
+function get_class_name($object = '')
 ```
 
-### <a id="extractNumber"></a>extractNumber
+### <a id="extract_number"></a>extract_number
 ```
 /**
  * returns numbers from the string
@@ -493,10 +478,10 @@ function getClassName($object = '')
  * @param string $str
  * @return string
  */
-function extractNumber($str = '')
+function extract_number($str = '')
 ```
 
-### <a id="secondsToHourMinute"></a>secondsToHourMinute
+### <a id="seconds_to_hour_minute"></a>seconds_to_hour_minute
 ```
 /**
  * converts given seconds to hours and minutes
@@ -504,16 +489,16 @@ function extractNumber($str = '')
  * @param null $seconds
  * @return string
  */
-function secondsToHourMinute($seconds = null)
+function seconds_to_hour_minute($seconds = null)
 ```
 
 
-### <a id="isCli"></a>isCli
+### <a id="is_cli"></a>is_cli
 ```
 /**
  * check if the current request is from CLI
  *
  * @return bool
  */
-function isCli()
+function is_cli()
 ```

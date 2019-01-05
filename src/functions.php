@@ -911,3 +911,23 @@ if (!function_exists('is_cli')) {
         return (php_sapi_name() === 'cli');
     }
 }
+
+
+
+if (!function_exists('mb_strrev')) {
+    
+    /**
+     * utf-8 support for strrev php method
+     *
+     * @string $str
+     * @return string
+     */
+    function mb_strrev($str)
+    {
+        $r = '';
+        for ($i = mb_strlen($str); $i>=0; $i--) {
+            $r .= mb_substr($str, $i, 1);
+        }
+        return $r;
+    }
+}
